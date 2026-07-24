@@ -1,6 +1,6 @@
-﻿import type { Metadata } from "next";
-import { Button } from "@/components/ui/button";
+﻿import { Button } from "@/components/ui/button";
 import { Section } from "@/components/ui/section";
+import { pageMetadata } from "@/lib/metadata";
 import {
   focusAreas,
   industrialEngineeringPrinciples,
@@ -8,11 +8,7 @@ import {
   workingCharacteristics,
 } from "@/data/about";
 
-export const metadata: Metadata = {
-  title: "About",
-  description:
-    "Glenn Murray is an AI Product Engineer and AI Systems Engineer with an Industrial Engineering foundation.",
-};
+export const metadata = pageMetadata("About", "Glenn Murray is an AI Product Engineer and AI Systems Engineer with an Industrial Engineering foundation.", "/about");
 
 export default function AboutPage() {
   return (

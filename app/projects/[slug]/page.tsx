@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CaseStudyLayout } from "@/components/projects/case-study-layout";
+import { pageMetadata } from "@/lib/metadata";
 import { getProject, getProjects } from "@/lib/projects";
 
 type CaseStudyPageProps = { params: Promise<{ slug: string }> };
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: CaseStudyPageProps): Promise<
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) return {};
-  return { title: project.title, description: project.summary, openGraph: { title: project.title, description: project.summary } };
+  return pageMetadata(project.title, project.summary, `/projects/${project.slug}`);
 }
 
 export default async function CaseStudyPage({ params }: CaseStudyPageProps) {

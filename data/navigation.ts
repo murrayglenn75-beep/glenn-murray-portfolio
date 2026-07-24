@@ -4,5 +4,6 @@
   { label: "Engineering Approach", href: "/engineering-approach" },
   { label: "About", href: "/about" },
   { label: "Resume", href: "/resume" },
+  { label: "Certifications", href: "/certifications" },
   { label: "Contact", href: "/contact" },
 ] as const;

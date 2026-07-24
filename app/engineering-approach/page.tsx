@@ -1,13 +1,10 @@
-﻿import type { Metadata } from "next";
+﻿import Link from "next/link";
 import { EngineeringWorkflow } from "@/components/sections/engineering-workflow";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/ui/section";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Engineering Approach",
-  description:
-    "How Glenn Murray designs, validates, and deploys AI-native software with engineering discipline.",
-};
+export const metadata = pageMetadata("Engineering Approach", "How Glenn Murray designs, validates, and deploys AI-native software with engineering discipline.", "/engineering-approach");
 
 const requirements = [
   "The problem being solved and the intended users",
@@ -91,6 +88,15 @@ export default function EngineeringApproachPage() {
         </div>
       </Section>
 
+      <Section>
+        <div className="grid gap-10 lg:grid-cols-[220px_minmax(0,1fr)]">
+          <p className="eyebrow">Method in context</p>
+          <div>
+            <h2 className="display-heading">Principles are tested against real system constraints.</h2>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400"><Link href="/projects/signet" className="text-blue-400 hover:text-blue-300">Signet</Link> informs deterministic state, concurrency checks, acceptance testing, and AI guardrails. The <Link href="/projects/fde-method" className="text-blue-400 hover:text-blue-300">FDE Method</Link> informs engagement decomposition and delivery gates, while <Link href="/projects/glenn-method" className="text-blue-400 hover:text-blue-300">The Glenn Method</Link> keeps commercial scoping and decision discipline explicit. <Link href="/projects/axo-engine" className="text-blue-400 hover:text-blue-300">AXO Engine</Link> provides context for governance, compliance, explainability, and human review; <Link href="/projects/cfo-os" className="text-blue-400 hover:text-blue-300">CFO OS</Link> reinforces trusted data, reconciliation, and deterministic calculations.</p>
+          </div>
+        </div>
+      </Section>
       <Section className="border-y border-white/[0.07] bg-white/[0.015]">
         <div className="grid gap-10 lg:grid-cols-[220px_minmax(0,1fr)]">
           <p className="eyebrow">Validation and reliability</p>
