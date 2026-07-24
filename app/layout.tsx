@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import "./globals.css";
 import { SiteShell } from "@/components/layout/site-shell";
+import { serializeJsonLd } from "@/lib/security";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://glenn-portfolio.vercel.app";
 
@@ -14,6 +15,5 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const jsonLd = { "@context": "https://schema.org", "@type": "Person", name: "Glenn", jobTitle: "AI Product Engineer", url: siteUrl };
-  return <html lang="en"><body><SiteShell>{children}</SiteShell><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /></body></html>;
+  return <html lang="en"><body><SiteShell>{children}</SiteShell><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} /></body></html>;
 }
-

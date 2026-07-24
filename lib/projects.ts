@@ -1,6 +1,7 @@
 ﻿import fs from "node:fs";
 import path from "node:path";
 import type { Project, ProjectCategory } from "@/types/project";
+import { safeExternalUrl } from "@/lib/security";
 
 const projectsDirectory = path.join(process.cwd(), "content", "projects");
 const requiredFields = ["slug", "title", "positioning", "summary", "stack", "challenge", "featured", "category", "order"] as const;
@@ -24,7 +25,7 @@ function parseProject(source: string): Project {
   const sections = Object.fromEntries([...frontmatter[2].matchAll(/^## (.+)\n([\s\S]*?)(?=^## |$)/gm)].map((match) => [match[1], match[2].trim()]));
   requiredSections.forEach((section) => { if (!sections[section]) throw new Error(`Project ${slug} is missing required section: ${section}.`); });
   const screenshots = parseList(values.screenshots);
-  return { slug, title: values.title, positioning: values.positioning, summary: values.summary, stack, challenge: values.challenge, featured: values.featured === "true", category: values.category as ProjectCategory, order, coverImage: values.coverImage || undefined, screenshots: screenshots.length ? screenshots : undefined, architectureDiagram: values.architectureDiagram || undefined, demoUrl: values.demoUrl || undefined, repositoryUrl: values.repositoryUrl || undefined, videoUrl: values.videoUrl || undefined, sections };
+  return { slug, title: values.title, positioning: values.positioning, summary: values.summary, stack, challenge: values.challenge, featured: values.featured === "true", category: values.category as ProjectCategory, order, coverImage: values.coverImage || undefined, screenshots: screenshots.length ? screenshots : undefined, architectureDiagram: values.architectureDiagram || undefined, demoUrl: safeExternalUrl(values.demoUrl), repositoryUrl: safeExternalUrl(values.repositoryUrl), videoUrl: safeExternalUrl(values.videoUrl), sections };
 }
 
 export function getProjects() { return fs.readdirSync(projectsDirectory).filter((file) => file.endsWith(".mdx")).map((file) => parseProject(fs.readFileSync(path.join(projectsDirectory, file), "utf8"))).sort((a, b) => Number(b.featured) - Number(a.featured) || a.order - b.order || a.title.localeCompare(b.title)); }

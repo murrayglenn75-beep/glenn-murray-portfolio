@@ -10,8 +10,10 @@
   introduction: "My background in Industrial and Systems Engineering enables me to combine systems thinking, process optimisation, and software engineering to build trustworthy AI applications that solve real operational problems.",
 };
 
+export const primaryContactEmail = "murrayglenn75@gmail.com";
+
 export const contactDetails = [
-  { label: "Email", value: "murrayglenn75@gmail.com", href: "mailto:murrayglenn75@gmail.com" },
+  { label: "Email", value: primaryContactEmail, href: `mailto:${primaryContactEmail}` },
   { label: "LinkedIn", value: "linkedin.com/in/glenn-patrick-murray", href: "https://www.linkedin.com/in/glenn-patrick-murray" },
   { label: "GitHub", value: "github.com/murrayglenn75-beep", href: "https://github.com/murrayglenn75-beep" },
 ] as const;
