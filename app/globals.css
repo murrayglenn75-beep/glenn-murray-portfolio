@@ -1,0 +1,51 @@
+﻿@import "tailwindcss";
+
+:root {
+  --canvas: #08090b;
+  --surface: #101114;
+  --surface-raised: #15171b;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --line: rgba(255, 255, 255, 0.1);
+  --accent: #3b82f6;
+  --accent-strong: #60a5fa;
+}
+
+:root[data-theme="light"] {
+  --canvas: #f8fafc;
+  --surface: #ffffff;
+  --surface-raised: #f1f5f9;
+  --text: #0f172a;
+  --muted: #475569;
+  --line: rgba(15, 23, 42, 0.12);
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+}
+
+@theme inline {
+  --color-background: var(--canvas);
+  --color-foreground: var(--text);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* { border-color: var(--line); }
+html { scroll-behavior: smooth; background: var(--canvas); }
+body { min-height: 100vh; background: var(--canvas); color: var(--text); font-family: var(--font-sans); }
+::selection { background: var(--accent); color: #fff; }
+a { transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease; }
+button, input, textarea { font: inherit; }
+:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 3px; }
+
+.eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent-strong); }
+.display-heading { max-width: 48rem; font-size: clamp(2.25rem, 4vw, 4.5rem); font-weight: 600; letter-spacing: -0.055em; line-height: 1.02; color: var(--text); }
+.page-heading { max-width: 65rem; font-size: clamp(3rem, 7vw, 6.5rem); font-weight: 600; letter-spacing: -0.065em; line-height: 0.98; color: var(--text); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+
+
+

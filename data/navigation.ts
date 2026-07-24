@@ -1,0 +1,8 @@
+﻿export const primaryNavigation = [
+  { label: "Home", href: "/" },
+  { label: "Projects", href: "/projects" },
+  { label: "Engineering Approach", href: "/engineering-approach" },
+  { label: "About", href: "/about" },
+  { label: "Resume", href: "/resume" },
+  { label: "Contact", href: "/contact" },
+] as const;

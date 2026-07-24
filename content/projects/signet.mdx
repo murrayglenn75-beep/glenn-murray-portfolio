@@ -1,0 +1,37 @@
+﻿---
+slug: signet
+title: Signet
+positioning: Trustworthy AI through deterministic event sourcing.
+summary: A hash-chained, event-sourced audit kernel for professional-services operations.
+stack: Event sourcing, Hash chains, PostgreSQL, Deterministic projections
+challenge: Ensuring every signal remains traceable to source events while AI is restricted to narration over verified state.
+featured: true
+category: Flagship Systems
+order: 1
+---
+## Executive Summary
+Signet is a hash-chained, event-sourced audit kernel for professional-services operations. Every projection is produced through deterministic replay, and every signal carries evidence back to source events.
+## Business Problem
+Operational systems need trustworthy records and explainable signals. AI-generated narrative cannot substitute for verified source state when decisions require auditability.
+## Requirements
+The system required append-only history, deterministic replay, evidence-backed signals, concurrency-safe state management, and explicit boundaries for AI usage.
+## Architecture
+The kernel uses event sourcing and hash chains to create an append-only audit history. Deterministic projections replay verified events into current state.
+## Technology Stack
+Event sourcing, hash chains, append-only audit history, deterministic projections, and PostgreSQL concurrency controls.
+## Engineering Decisions
+AI is not allowed to create or alter operational facts. Signals are derived from verified events before any AI narration is introduced.
+## AI Usage Boundaries
+AI is restricted to narration over pre-verified state. It explains evidence-backed signals and does not invent facts, mutate records, or replace deterministic decisions.
+## Challenges
+Acceptance testing exposed PostgreSQL concurrency failures in the original chain-state strategy. Concurrent operations could reference the same previous state.
+## Testing
+Kernel v1 passed all ten acceptance tests. Clean resets and repeated test runs were used to verify behavior after the concurrency redesign.
+## Validation
+Acceptance tests revealed genuine concurrency failures before production. The locking and state-management strategy was redesigned and repeatedly validated from clean resets.
+## Deployment Status
+No public deployment status is claimed.
+## Lessons Learned
+Traceability and deterministic state are more valuable than adding generative complexity to an audit kernel.
+## Future Improvements
+Future improvements will be evaluated only where they preserve deterministic replay, evidence lineage, and explicit AI boundaries.
