@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { EngineeringWorkflow } from "@/components/sections/engineering-workflow";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/ui/section";
@@ -93,7 +93,7 @@ export default function EngineeringApproachPage() {
           <p className="eyebrow">Method in context</p>
           <div>
             <h2 className="display-heading">Principles are tested against real system constraints.</h2>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400"><Link href="/projects/signet" className="text-blue-400 hover:text-blue-300">Signet</Link> informs deterministic state, concurrency checks, acceptance testing, and AI guardrails. The <Link href="/projects/fde-method" className="text-blue-400 hover:text-blue-300">FDE Method</Link> informs engagement decomposition and delivery gates, while <Link href="/projects/glenn-method" className="text-blue-400 hover:text-blue-300">The Glenn Method</Link> keeps commercial scoping and decision discipline explicit. <Link href="/projects/axo-engine" className="text-blue-400 hover:text-blue-300">AXO Engine</Link> provides context for governance, compliance, explainability, and human review; <Link href="/projects/cfo-os" className="text-blue-400 hover:text-blue-300">CFO OS</Link> reinforces trusted data, reconciliation, and deterministic calculations.</p>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400"><Link href="/projects/signet" className="text-blue-400 hover:text-blue-300">Signet</Link> informs deterministic state, concurrency checks, acceptance testing, and AI guardrails. The <Link href="/projects/fde-method" className="text-blue-400 hover:text-blue-300">FDE Method</Link> informs engagement decomposition and delivery gates, while <Link href="/projects/glenn-method" className="text-blue-400 hover:text-blue-300">The Glenn Method</Link> keeps commercial scoping and decision discipline explicit. <Link href="/projects/axo-engine" className="text-blue-400 hover:text-blue-300">AXO Engine</Link> provides context for governance, compliance, explainability, and human review; <Link href="/projects/cfo-os" className="text-blue-400 hover:text-blue-300">CFO OS</Link> reinforces trusted data, reconciliation, and deterministic calculations.</p><p className="mt-5 max-w-3xl text-base leading-8 text-slate-400">See <Link href="/ai-systems-and-methods" className="text-blue-400 hover:text-blue-300">Systems &amp; Methods</Link> for the same principles across flagship systems, prototypes, and research.</p>
           </div>
         </div>
       </Section>

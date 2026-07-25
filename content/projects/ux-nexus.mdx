@@ -1,0 +1,37 @@
+---
+slug: ux-nexus
+title: UX Nexus
+positioning: Collaborative AI-native design workspace
+summary: Working frontend prototype for a collaborative design and UX engineering environment with a full-screen canvas, contextual tooling, and accessible interaction patterns.
+stack: React, TypeScript, Vite, Tailwind CSS, Zustand
+challenge: Managing complex interactive canvas and interface state while keeping keyboard interaction, accessibility modes, and future collaboration boundaries explicit.
+featured: true
+category: Flagship Systems
+order: 7
+---
+## Executive Summary
+UX Nexus is a working frontend prototype for a collaborative design and UX engineering environment. It explores a professional design-tool experience through a full-screen canvas, contextual controls, and accessibility-aware interaction patterns.
+## Business Problem
+Design and UX engineering work often fragments across canvas tools, workflow context, and handoff. The prototype investigates a focused workspace that keeps visual interaction, contextual controls, and future collaboration concerns visible in one product surface.
+## Requirements
+The prototype requires a full-screen design canvas, draggable and selectable nodes, viewport pan and zoom, keyboard shortcuts, multi-selection, grouping, duplication, frame creation, a properties inspector, floating contextual controls, page navigation, and accessibility modes.
+## Architecture
+The frontend uses React and TypeScript with a Vite build, Tailwind-based styling, and Zustand state management. Canvas interaction state is kept distinct from surrounding UI state so future collaboration and persistence concerns can evolve without conflating core canvas behaviour with interface controls.
+## Technology Stack
+React, TypeScript, Vite, Tailwind CSS, Zustand, full-screen canvas interaction, keyboard shortcuts, accessibility modes, and role-aware collaboration concepts.
+## Engineering Decisions
+The prototype prioritises explicit interaction state, product-level keyboard behaviour, contextual tooling, and separation of canvas state from UI state. Its architecture keeps future CRDT collaboration concerns visible without representing them as implemented.
+## AI Usage Boundaries
+UX Nexus is an AI-native design workspace concept, but the current frontend prototype does not expose a live AI API or autonomous design decision layer. AI-related workflows remain product concepts rather than ungoverned production automation.
+## Challenges
+Complex interaction patterns must remain understandable: dragging, selecting, grouping, duplication, viewport control, and contextual actions all create competing state transitions. Accessibility and reduced-motion needs must be considered alongside a design-tool-style experience.
+## Testing
+Testing focuses on frontend interaction behaviour, keyboard affordances, accessible modes, and the boundaries between canvas state and UI state. Production multiplayer behaviour, persistence, and backend integration are outside the current prototype scope.
+## Validation
+Validation is based on whether the prototype supports clear canvas interaction, contextual controls, page navigation, reduced-motion support, high-contrast mode, and role-aware collaboration-ready concepts without overstating incomplete functionality.
+## Deployment Status
+Working frontend prototype; collaboration backend and persistence not yet implemented.
+## Lessons Learned
+Professional design-tool UX depends on disciplined state separation, discoverable keyboard interaction, and contextual controls that do not overwhelm the canvas. Collaboration architecture must be planned early even when it is not yet implemented.
+## Future Improvements
+Future work could add production multiplayer collaboration, complete Yjs/CRDT integration, persistence, authentication, backend services, fully implemented undo and redo, and production clipboard serialization. These capabilities are not included in the current version.
