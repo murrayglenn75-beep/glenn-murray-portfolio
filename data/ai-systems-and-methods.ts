@@ -33,11 +33,11 @@ export const methodologies: Methodology[] = [
     ],
   },
   {
-    title: "The Glenn Method",
+    title: "The Murray Method",
     summary: "A structured commercial and engineering scoping process used before implementation to keep delivery connected to a real business outcome.",
     points: ["Problem definition", "Commercial relevance", "Constraints and risk", "Validation", "Delivery sequencing"],
-    href: "/projects/glenn-method",
-    linkLabel: "Explore The Glenn Method",
+    href: "/projects/murray-method",
+    linkLabel: "Explore The Murray Method",
   },
   {
     title: "FDE Method",

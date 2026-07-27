@@ -77,13 +77,13 @@ export default function EngineeringApproachPage() {
           <div>
             <p className="eyebrow">AI-assisted engineering</p>
             <h2 className="display-heading mt-4">Acceleration without surrendering judgement.</h2>
-            <p className="mt-6 text-base leading-8 text-slate-400">I use Codex, Claude Code, and other LLMs to move faster through research, exploration, implementation, and debugging. Generated output is a proposed implementation—not automatically trusted production code.</p>
+            <p className="mt-6 text-base leading-8 text-slate-400">I use Codex, Claude Code, and other LLMs to move faster through research, exploration, implementation, and debugging. Generated output is a proposed implementationâ€”not automatically trusted production code.</p>
             <ul className="mt-7 space-y-3">{aiCapabilities.map((item) => <li key={item} className="flex gap-3 text-sm leading-6 text-slate-300"><span className="mt-2 size-1.5 shrink-0 rounded-full bg-blue-400" aria-hidden="true" />{item}</li>)}</ul>
           </div>
           <div className="rounded-2xl border border-white/10 bg-white/[0.025] p-7 md:p-9">
             <p className="eyebrow">Prompt and context engineering</p>
             <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white">Better context beats repeated retries.</h2>
-            <p className="mt-5 text-base leading-8 text-slate-400">Strong AI output depends on clear task definition, relevant context, constraints, examples, output schemas, and acceptance criteria. I break large work into controlled phases, evaluate each result, and adjust the system or context—not just the wording of the next prompt.</p>
+            <p className="mt-5 text-base leading-8 text-slate-400">Strong AI output depends on clear task definition, relevant context, constraints, examples, output schemas, and acceptance criteria. I break large work into controlled phases, evaluate each result, and adjust the system or contextâ€”not just the wording of the next prompt.</p>
           </div>
         </div>
       </Section>
@@ -93,7 +93,7 @@ export default function EngineeringApproachPage() {
           <p className="eyebrow">Method in context</p>
           <div>
             <h2 className="display-heading">Principles are tested against real system constraints.</h2>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400"><Link href="/projects/signet" className="text-blue-400 hover:text-blue-300">Signet</Link> informs deterministic state, concurrency checks, acceptance testing, and AI guardrails. The <Link href="/projects/fde-method" className="text-blue-400 hover:text-blue-300">FDE Method</Link> informs engagement decomposition and delivery gates, while <Link href="/projects/glenn-method" className="text-blue-400 hover:text-blue-300">The Glenn Method</Link> keeps commercial scoping and decision discipline explicit. <Link href="/projects/axo-engine" className="text-blue-400 hover:text-blue-300">AXO Engine</Link> provides context for governance, compliance, explainability, and human review; <Link href="/projects/cfo-os" className="text-blue-400 hover:text-blue-300">CFO OS</Link> reinforces trusted data, reconciliation, and deterministic calculations.</p><p className="mt-5 max-w-3xl text-base leading-8 text-slate-400">See <Link href="/ai-systems-and-methods" className="text-blue-400 hover:text-blue-300">Systems &amp; Methods</Link> for the same principles across flagship systems, prototypes, and research.</p>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-400"><Link href="/projects/signet" className="text-blue-400 hover:text-blue-300">Signet</Link> informs deterministic state, concurrency checks, acceptance testing, and AI guardrails. The <Link href="/projects/fde-method" className="text-blue-400 hover:text-blue-300">FDE Method</Link> informs engagement decomposition and delivery gates, while <Link href="/projects/murray-method" className="text-blue-400 hover:text-blue-300">The Murray Method</Link> keeps commercial scoping and decision discipline explicit. <Link href="/projects/axo-engine" className="text-blue-400 hover:text-blue-300">AXO Engine</Link> provides context for governance, compliance, explainability, and human review; <Link href="/projects/cfo-os" className="text-blue-400 hover:text-blue-300">CFO OS</Link> reinforces trusted data, reconciliation, and deterministic calculations.</p><p className="mt-5 max-w-3xl text-base leading-8 text-slate-400">See <Link href="/ai-systems-and-methods" className="text-blue-400 hover:text-blue-300">Systems &amp; Methods</Link> for the same principles across flagship systems, prototypes, and research.</p>
           </div>
         </div>
       </Section>
