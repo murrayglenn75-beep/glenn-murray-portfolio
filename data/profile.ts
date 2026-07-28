@@ -1,12 +1,12 @@
-﻿export const profile = {
+export const profile = {
   name: "Glenn Murray",
-  headline: "Forward Deployed Engineer · AI Product Engineer · AI Systems Architect · Industrial & Systems Engineer",
+  headline: "Forward Deployed Engineer | AI Product Engineer | AI Systems Architect",
   seoTitle: "Glenn Murray | Forward Deployed Engineer | AI Product Engineer | AI Systems Architect",
   location: "São Paulo, Brazil",
   nationality: "Irish / EU Citizen",
   languages: ["Native English", "Basic Portuguese"],
-  availability: ["Remote", "Hybrid", "International", "US East Coast overlap", "UK overlap"],
-  summary: "Forward Deployed Engineer and AI Product Engineer specialising in deterministic AI systems, production-grade software, enterprise workflow automation, and AI-assisted product delivery.",
+  availability: ["Remote", "Hybrid", "International", "Full working overlap with US East Coast hours", "UK overlap"],
+  summary: "Forward Deployed Engineer, AI Product Engineer, and AI Systems Architect building deterministic-first AI systems from architecture through validation and deployment for accountable operational decisions.",
   introduction: "My background in Industrial and Systems Engineering enables me to combine systems thinking, process optimisation, and software engineering to build trustworthy AI applications that solve real operational problems.",
 };
 

@@ -1,4 +1,6 @@
-﻿export type ResumeRole = { title: string; organisation: string; engagement: string; period: string; responsibilities: string[]; };
+export type ResumeRole = { title: string; organisation: string; engagement: string; period: string; responsibilities: string[]; };
+
+export const resumeSummary = "Forward Deployed Engineer, AI Product Engineer, and AI Systems Architect with 17+ years across industrial engineering, manufacturing, operations, systems work, and project delivery. I design deterministic-first AI systems end to end, from architecture and implementation through validation and deployment, for client-facing and embedded delivery where accountable operational decisions matter.";
 
 export const resumeRoles: ResumeRole[] = [
   { title: "Talent Acquisition Project Manager", organisation: "micro1", engagement: "Contract", period: "March 2026 - Present", responsibilities: ["Project delivery, workflow coordination, and stakeholder communication for talent-acquisition work.", "Maintain clear handoffs, priorities, and delivery visibility across the engagement."] },
@@ -9,11 +11,11 @@ export const resumeRoles: ResumeRole[] = [
 ];
 
 export const capabilityGroups = [
-  { title: "AI and LLM Engineering", items: ["Claude Code", "Codex", "Anthropic Claude API", "OpenAI", "Gemini", "Prompt engineering", "Context engineering", "AI agents", "Workflow orchestration", "MCP familiarity"] },
-  { title: "Application Engineering", items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL", "Row Level Security", "Vercel", "GitHub"] },
-  { title: "Integration and Automation", items: ["REST APIs", "Webhooks", "OAuth", "JSON", "Airtable", "n8n", "Business-process automation"] },
-  { title: "Data and Business Systems", items: ["SQL", "Power BI", "Odoo ERP", "HubSpot", "ClickUp", "QuickBooks"] },
-  { title: "Engineering and Operations", items: ["Industrial Engineering", "Systems Engineering", "Process improvement", "Manufacturing", "CAD/CAM", "SolidWorks", "AutoCAD", "CNC and fabrication knowledge"] },
+  { title: "AI and LLM Engineering", items: ["Claude Code", "Codex", "Claude API", "OpenAI", "Google GenAI / Gemini", "Prompt engineering", "Context engineering", "Model Context Protocol", "AI agents", "Workflow orchestration", "AI Evaluation", "Human-in-the-Loop Systems", "RAG Concepts", "Deterministic Pipeline Design", "LLM Integration"] },
+  { title: "Application Engineering", items: ["TypeScript", "Rust", "React", "Next.js", "Vite", "Tailwind CSS", "Express", "Supabase", "PostgreSQL", "Row Level Security", "Vercel", "Git", "GitHub"] },
+  { title: "Integration and Automation", items: ["REST APIs", "Webhooks", "OAuth", "JSON", "Google Cloud", "Google Cloud Run", "GitHub Actions", "CI/CD", "Airtable", "n8n", "Business-process automation"] },
+  { title: "Data and Business Systems", items: ["SQL", "SQLite", "Power BI", "Odoo ERP", "HubSpot", "ClickUp", "QuickBooks"] },
+  { title: "Engineering and Operations", items: ["System Design", "Solution Architecture", "Production AI", "Enterprise Software", "Industrial Engineering", "Systems Engineering", "Lean Six Sigma", "Project Delivery", "Process improvement", "Manufacturing", "CAD/CAM", "SolidWorks", "AutoCAD", "CNC and fabrication knowledge"] },
 ];
 
 export const education = [
@@ -23,4 +25,4 @@ export const education = [
   { qualification: "National Craft Certificate in Metal Fabrication", institution: "", detail: "" },
 ];
 
-export const workContext = ["Irish citizen", "Based in São Paulo, Brazil", "Native English speaker", "Available for remote international work", "Comfortable working across international teams and UK-aligned hours"];
+export const workContext = ["Irish / EU citizen", "Based in São Paulo, Brazil", "Native English speaker", "Available for remote international work", "Full working overlap with US East Coast hours"];
