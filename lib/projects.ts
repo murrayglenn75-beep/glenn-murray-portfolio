@@ -1,14 +1,29 @@
-﻿import fs from "node:fs";
+import fs from "node:fs";
 import path from "node:path";
-import type { Project, ProjectCategory } from "@/types/project";
+import type { Project, ProjectCategory, ProjectMedia } from "@/types/project";
 import { safeExternalUrl } from "@/lib/security";
 
 const projectsDirectory = path.join(process.cwd(), "content", "projects");
-const requiredFields = ["slug", "title", "positioning", "summary", "stack", "challenge", "featured", "category", "order"] as const;
+const requiredFields = ["slug", "title", "positioning", "summary", "stack", "challenge", "featured", "category", "order", "maturity"] as const;
 const requiredSections = ["Executive Summary", "Business Problem", "Requirements", "Architecture", "Technology Stack", "Engineering Decisions", "AI Usage Boundaries", "Challenges", "Testing", "Validation", "Deployment Status", "Lessons Learned", "Future Improvements"] as const;
 
 function parseList(value?: string) { return value ? value.split(",").map((item) => item.trim()).filter(Boolean) : []; }
 function requireValue(values: Record<string, string>, key: string, slug: string) { const value = values[key]?.trim(); if (!value) throw new Error(`Project ${slug || "(unknown)"} is missing required frontmatter field: ${key}.`); return value; }
+
+function localProjectMedia(src: string | undefined, alt: string | undefined, caption: string | undefined): ProjectMedia | undefined {
+  if (!src || !alt || !src.startsWith("/images/projects/") || src.includes("..")) return undefined;
+  const publicPath = path.join(process.cwd(), "public", ...src.split("/").filter(Boolean));
+  if (!fs.existsSync(publicPath) || !fs.statSync(publicPath).isFile()) return undefined;
+  return { src, alt, caption: caption || undefined };
+}
+
+function localProjectMediaList(values: Record<string, string>) {
+  const sources = parseList(values.screenshots);
+  const alts = parseList(values.screenshotAlts);
+  const captions = parseList(values.screenshotCaptions);
+  const media = sources.map((src, index) => localProjectMedia(src, alts[index], captions[index])).filter((item): item is ProjectMedia => Boolean(item));
+  return media.length ? media : undefined;
+}
 
 function parseProject(source: string): Project {
   const normalizedSource = source.replace(/^\uFEFF/, "");
@@ -24,8 +39,7 @@ function parseProject(source: string): Project {
   if (!Number.isInteger(order) || order < 0) throw new Error(`Project ${slug} must define a non-negative integer order.`);
   const sections = Object.fromEntries([...frontmatter[2].matchAll(/^## (.+)\n([\s\S]*?)(?=^## |$)/gm)].map((match) => [match[1], match[2].trim()]));
   requiredSections.forEach((section) => { if (!sections[section]) throw new Error(`Project ${slug} is missing required section: ${section}.`); });
-  const screenshots = parseList(values.screenshots);
-  return { slug, title: values.title, positioning: values.positioning, summary: values.summary, stack, challenge: values.challenge, featured: values.featured === "true", category: values.category as ProjectCategory, order, coverImage: values.coverImage || undefined, screenshots: screenshots.length ? screenshots : undefined, architectureDiagram: values.architectureDiagram || undefined, demoUrl: safeExternalUrl(values.demoUrl), repositoryUrl: safeExternalUrl(values.repositoryUrl), videoUrl: safeExternalUrl(values.videoUrl), sections };
+  return { slug, title: values.title, positioning: values.positioning, summary: values.summary, stack, challenge: values.challenge, featured: values.featured === "true", category: values.category as ProjectCategory, order, maturity: values.maturity, startHere: values.startHere === "true", coverImage: localProjectMedia(values.coverImage, values.coverImageAlt, values.coverImageCaption), screenshots: localProjectMediaList(values), architectureDiagram: localProjectMedia(values.architectureDiagram, values.architectureDiagramAlt, values.architectureDiagramCaption), demoUrl: safeExternalUrl(values.demoUrl), repositoryUrl: safeExternalUrl(values.repositoryUrl), videoUrl: safeExternalUrl(values.videoUrl), sections };
 }
 
 export function getProjects() { return fs.readdirSync(projectsDirectory).filter((file) => file.endsWith(".mdx")).map((file) => parseProject(fs.readFileSync(path.join(projectsDirectory, file), "utf8"))).sort((a, b) => Number(b.featured) - Number(a.featured) || a.order - b.order || a.title.localeCompare(b.title)); }
