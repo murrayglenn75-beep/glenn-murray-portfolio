@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Glenn Murray — AI Systems & Forward Deployed Engineering
 
-## Getting Started
+I build applied AI systems where **models can propose, but deterministic controls decide what is allowed to execute**.
 
-First, run the development server:
+My work focuses on secure agent execution, evidence provenance, auditable decision boundaries, adversarial testing, and production-oriented product engineering across Python and TypeScript.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Flagship projects
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### [AI Authority Kernel (AAK)](https://github.com/murrayglenn75-beep/ai-authority-kernel)
+**Security-first authority enforcement for AI agents and tool execution.**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+A deny-by-default execution boundary that separates model intent from executable authority. It uses narrowly scoped capabilities, independent verification, replay protection, audit receipts, brokered credentials, mTLS service boundaries, and fail-closed behavior.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Engineering signals:** Python · authorization · agent security · OPA-style policy · SPIFFE-shaped identity · cryptographic audit · adversarial testing
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### [Ethical Hacker](https://github.com/murrayglenn75-beep/ethical-hacker)
+**Architecture-aware defensive security analysis for modern software and AI systems.**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+A local-first scanner that builds a security graph from a real codebase, identifies risky attack paths, classifies findings by confidence, produces SARIF, and applies `PASS / WARN / FAIL` build gating.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Engineering signals:** Node.js · AppSec · AI security · attack graphs · MCP/tool surfaces · SARIF · CI security gates
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### [Fluxo](https://github.com/murrayglenn75-beep/fluxo)
+**AI-native fintech sandbox with deterministic financial controls.**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+A mobile-first fintech product sandbox covering Pix-style transfers, cards, budgets, goals, statements, QR request flows, local assistant summaries, and Android/iOS Capacitor builds. Financial state transitions use exact integer money handling, validation, duplicate protection, and explicit review steps.
+
+**Engineering signals:** TypeScript · Next.js · fintech · Capacitor · mobile · deterministic ledger logic · GitHub Actions
+
+---
+
+### [Brain AI](https://github.com/murrayglenn75-beep/Brain-AI)
+**Experimental epistemic-control architecture for AI agents.**
+
+Research-oriented architecture for reasoning over uncertain or conflicting evidence while keeping model output separate from execution authority. The public repository contains architecture and selected validation evidence while security-sensitive core mechanisms remain private.
+
+**Engineering signals:** AI evaluation · Bayesian evidence resolution · provenance · ambiguity handling · adversarial simulation · secure agent boundaries
+
+---
+
+### [Signet](https://github.com/murrayglenn75-beep/signet)
+**Verified operations kernel with deterministic signals and hash-chained events.**
+
+Explores deterministic operational state, tamper-evident event history, and AI narration over verified signals.
+
+**Live demo:** https://signet-chi.vercel.app
+
+## What I optimize for
+
+- **Authority before autonomy** — models do not receive unrestricted execution power.
+- **Deterministic state before AI narration** — critical state is computed and verified outside the model.
+- **Evidence over claims** — tests, attack campaigns, audit records, and reproducible checks back engineering assertions.
+- **Fail closed** — ambiguous authority, replay, malformed requests, and incomplete audit state block or quarantine execution.
+- **Adversarial validation** — systems are tested against misuse, boundary failures, concurrency, poisoning, and privilege expansion.
+- **Product delivery** — security architecture is paired with usable interfaces, APIs, dashboards, mobile builds, and deployment workflows.
+
+## Core stack
+
+**Languages:** Python · TypeScript · JavaScript · SQL  
+**Application:** Next.js · Node.js · Supabase · Firebase · Vercel · Capacitor  
+**AI systems:** LLM/agent architecture · RAG · tool execution · MCP · evaluation · prompt/security boundaries  
+**Security:** authorization · provenance · audit chains · replay protection · workload identity · red teaming · SARIF  
+**Engineering:** GitHub Actions · testing · architecture docs · reproducible verification · API design
+
+## Current direction
+
+I am especially interested in **Forward Deployed Engineering, Applied AI Engineering, AI Systems Engineering, Solutions Architecture, and AI Security** roles where AI must operate against real data, tools, APIs, users, and business constraints.
+
+## Selected credentials
+
+- Google AI Professional Certificate
+- Claude Code in Action — Anthropic
+- Google AI for App Deployment
+- AI Agents with Model Context Protocol — Vanderbilt
+- Google Prompting Essentials
+- Google AI Essentials
+- Stanford Online — Introduction to Statistics
+- Duke — Data Science Math Skills
+
+## Contact
+
+- [LinkedIn](https://www.linkedin.com/in/glenn-patrick-murray/)
+- [GitHub](https://github.com/murrayglenn75-beep)
+
+> The repositories above distinguish between demonstrated behavior, experimental validation, and production claims. Where a project is a sandbox or research system, its README states that boundary explicitly.
