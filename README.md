@@ -1,5 +1,12 @@
 # Glenn Murray — AI Systems & Forward Deployed Engineering
 
+## 30-second overview
+
+I am an **AI systems and product engineer focused on making AI useful without giving it unchecked authority**. I build production-oriented applications where deterministic software establishes identity, state, policy, evidence, and permissions before an AI model is allowed to influence an outcome.
+
+This portfolio brings together my work in **agent security, applied AI, fintech, operations systems, adversarial testing, and full-stack product engineering**. Each flagship repository includes the implementation boundary, evidence of what was tested, and clear limitations rather than treating a demo as a production claim.
+
+
 I build applied AI systems where **models can propose, but deterministic controls decide what is allowed to execute**.
 
 My work focuses on secure agent execution, evidence provenance, auditable decision boundaries, adversarial testing, and production-oriented product engineering across Python and TypeScript.
