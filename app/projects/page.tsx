@@ -1,15 +1,23 @@
-import { ProjectCard } from "@/components/projects/project-card";
+import { ProjectExplorer } from "@/components/projects/project-explorer";
 import { Section } from "@/components/ui/section";
 import { getProjects } from "@/lib/projects";
 import { pageMetadata } from "@/lib/metadata";
 
-export const metadata = pageMetadata("Engineering Systems", "Flagship systems in deterministic AI, enterprise workflow automation, and technical product delivery.", "/projects");
+export const metadata = pageMetadata("Engineering Case Studies", "Explore verifiable work across agent security, applied AI, fintech and software systems. Filter by specialty and open detailed engineering evidence.", "/projects");
 
 export default function ProjectsPage() {
   const projects = getProjects();
-  const startHere = projects.find((project) => project.startHere);
-  const flagship = projects.filter((project) => project.category === "Flagship Systems" && !project.startHere);
-  const additional = projects.filter((project) => project.category === "Additional Work");
-
-  return <Section><div className="max-w-3xl"><p className="eyebrow">Portfolio</p><h1 className="page-heading mt-4">Engineering Systems</h1><p className="mt-6 text-lg leading-8 text-slate-400">Flagship systems for deterministic AI, enterprise workflow automation, industrial intelligence, and production-grade technical delivery.</p></div>{startHere && <section className="mt-14" aria-labelledby="start-here"><p className="eyebrow">Portfolio guide</p><h2 id="start-here" className="display-heading mt-4">Start here with Signet</h2><p className="mt-4 max-w-2xl text-slate-400">A deterministic, event-sourced audit kernel that demonstrates the trust, traceability, and validation principles used across this portfolio.</p><div className="mt-8 max-w-2xl"><ProjectCard project={startHere} featured /></div></section>}<section className="mt-20"><h2 className="display-heading">Flagship Systems</h2><div className="mt-8 grid gap-6 lg:grid-cols-2">{flagship.map((project) => <ProjectCard key={project.slug} project={project} />)}</div></section>{additional.length > 0 && <section className="mt-20"><h2 className="display-heading">Additional Work</h2><div className="mt-8 grid gap-6 lg:grid-cols-2">{additional.map((project) => <ProjectCard key={project.slug} project={project} />)}</div></section>}</Section>;
+  return <Section>
+    <div className="max-w-4xl">
+      <p className="eyebrow">Selected engineering work / case studies</p>
+      <h1 className="page-heading mt-4">Explore the systems behind the claims.</h1>
+      <p className="mt-7 max-w-3xl text-lg leading-8 text-slate-300">From secure AI tool execution to fintech workflows: each case study explains the problem, technical decisions, validation, deployment status and limits. Filter by the skills your team needs.</p>
+      <div className="mt-7 flex flex-wrap gap-3 text-xs font-medium text-slate-300">
+        <span className="rounded-full border border-white/15 px-3 py-2">Architecture &amp; trade-offs</span>
+        <span className="rounded-full border border-white/15 px-3 py-2">Testing &amp; evidence</span>
+        <span className="rounded-full border border-white/15 px-3 py-2">Honest maturity status</span>
+      </div>
+    </div>
+    <div className="mt-12"><ProjectExplorer projects={projects} /></div>
+  </Section>;
 }
