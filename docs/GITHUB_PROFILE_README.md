@@ -1,80 +1,127 @@
 <div align="center">
 
 # Glenn Murray
+
 ### Forward Deployed Engineer · Applied AI Engineer · AI Systems Architect
 
-**I build AI products that work beyond the demo.**
+**I turn AI prototypes into inspectable, controlled engineering systems.**
 
-Secure agent execution · Deterministic systems · Applied AI · Product engineering
+Architecture-first · Deterministic controls · Secure agents · Product delivery
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Explore%20my%20work-0ea5e9?style=for-the-badge)](https://glenn-murray-portfolio.vercel.app)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-2563eb?style=for-the-badge)](https://www.linkedin.com/in/glenn-patrick-murray/)
-[![Email](https://img.shields.io/badge/Email-Get%20in%20touch-334155?style=for-the-badge)](mailto:murrayglenn75@gmail.com)
+[**Portfolio & Case Studies**](https://glenn-murray-portfolio.vercel.app) · [**LinkedIn**](https://www.linkedin.com/in/glenn-patrick-murray/) · [**Email**](mailto:murrayglenn75@gmail.com)
 
 </div>
 
 ---
 
-## What I do
+### Start here — choose what you want to evaluate
 
-I build applied AI systems and operational products with a focus on **authorization, correctness, reliability and delivery**. My approach separates what an AI model *proposes* from what software is *permitted to execute*.
+| If you're hiring for… | Inspect this first | What to look for |
+| --- | --- | --- |
+| **Applied AI / Agent Engineering** | [AI Authority Kernel](https://github.com/murrayglenn75-beep/ai-authority-kernel) | Exact-action authorization, deny-by-default execution, replay resistance, auditable outcomes and documented test scope |
+| **AI Security / AppSec** | [Ethical Hacker](https://github.com/murrayglenn75-beep/ethical-hacker) | Architecture graph, defensive attack-path detection, SARIF, confidence-aware CI gates and regression tests |
+| **Forward Deployed / Full-stack Product** | [Fluxo](https://github.com/murrayglenn75-beep/fluxo) | Fintech sandbox UI, integer money logic, idempotency, review boundaries, tests and mobile packaging |
+| **Reliability / Systems Architecture** | [Signet](https://github.com/murrayglenn75-beep/signet) | Deterministic state, traceable event history and separation of operational facts from AI narration |
 
-My work spans **agent and tool security, product engineering, fintech workflows, adversarial testing and auditable systems**. I combine systems engineering principles with practical implementation in Python, TypeScript, Next.js and cloud tooling.
+**Live product examples:** [Fluxo sandbox](https://fluxo-fintech-xi.vercel.app/) · [Signet demo](https://signet-chi.vercel.app/)  
+*Demonstrations are not claims of production integration, regulatory approval or external security certification.*
 
-> **The Murray Method:** deterministic first, AI second. Define the boundaries, verify the evidence, make execution accountable, and test failure modes before calling a system ready.
+### Engineering work at a glance
 
-## Featured engineering work
+<table>
+<tr>
+<td width="50%" valign="top">
 
-| Project | What it solves | Explore |
-| :--- | :--- | :--- |
-| **AI Authority Kernel** | AI agents need narrow, independently verified permissions rather than unrestricted tool access. | [Architecture & tests →](https://github.com/murrayglenn75-beep/ai-authority-kernel) |
-| **Ethical Hacker** | Security findings are more useful when connected to architecture, attack paths and release decisions. | [Scanner & build gates →](https://github.com/murrayglenn75-beep/ethical-hacker) |
-| **Fluxo** | Banking-style workflows require exact money handling, idempotency, explicit review and validated state. *Demo sandbox, not a bank.* | [Fintech case study →](https://github.com/murrayglenn75-beep/fluxo) |
-| **Brain AI** | Experimental controls for uncertainty, evidence provenance and limits on model authority. | [Public research evidence →](https://github.com/murrayglenn75-beep/Brain-AI) |
-| **Signet** | Operational systems benefit from traceable events and deterministic signals instead of unverifiable summaries. | [Verified operations concept →](https://github.com/murrayglenn75-beep/signet) |
-| **CFO-OS** | Financial operations need accountable workflows with explicit decision boundaries. | [Finance engineering →](https://github.com/murrayglenn75-beep/CFO-OS) |
+#### 🛡️ [AI Authority Kernel](https://github.com/murrayglenn75-beep/ai-authority-kernel)
 
-### How I approach complex engineering problems
+**Problem:** An LLM should not grant itself permission to execute consequential actions.
 
-```text
-Understand the real operational problem
-              ↓
-Model state, identity, authority and failure modes
-              ↓
-Build deterministic controls and clear interfaces
-              ↓
-Introduce AI only where useful and verifiable
-              ↓
-Test abuse cases, edge cases and recovery paths
-              ↓
-Document evidence, limitations and deployment status
-```
+**Approach:** Independently verified scoped capabilities, brokered effects, replay protection and audit evidence.
 
-## Technical toolkit
+**Proof to inspect:** Architecture, threat boundaries and adversarial tests in the repository.
 
-**AI & systems:** LLM orchestration · Agent workflows · MCP · RAG · Evaluation · Prompt-injection containment
+</td>
+<td width="50%" valign="top">
 
-**Build:** Python · TypeScript · JavaScript · Next.js · React · Node.js · SQL
+#### 🔎 [Ethical Hacker](https://github.com/murrayglenn75-beep/ethical-hacker)
 
-**Platforms:** Supabase · Vercel · GitHub Actions · REST APIs · Capacitor
+**Problem:** Isolated scanner findings can hide meaningful architectural risk.
 
-**Assurance:** Authorization · Audit trails · Threat modelling · Red-team testing · Regression testing · CI quality gates
+**Approach:** Local-first security graph, attack paths, contextual findings, SARIF and release gating.
 
-## What recruiters can inspect
+**Proof to inspect:** Automated test suite, scanner commands and CI gate documentation.
 
-- **Code and architecture:** implementation, trade-offs and boundaries in the linked repositories.
-- **Tests and evidence:** project-specific regression suites, security checks and verification notes.
-- **Honest status:** each repository distinguishes prototype/demo functionality from production-ready integrations.
-- **Product thinking:** usable interfaces and workflows, not just standalone model prompts.
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-## Currently exploring opportunities
+#### 💳 [Fluxo](https://github.com/murrayglenn75-beep/fluxo)
 
-**Forward Deployed Engineering · Applied AI Engineering · AI Systems Engineering · Solutions Architecture · AI Security**
+**Problem:** Financial interfaces need valid state transitions, not just convincing screens.
 
-Irish/EU citizen based in Brazil; interested in international opportunities with English-speaking teams.
+**Approach:** Exact currency arithmetic, validated workflows, idempotency and review steps.
 
-**Start here:** [Explore the portfolio and case studies](https://glenn-murray-portfolio.vercel.app) · [Connect on LinkedIn](https://www.linkedin.com/in/glenn-patrick-murray/) · [Email me](mailto:murrayglenn75@gmail.com)
+**Proof to inspect:** Sandbox tests, architecture, UX and [live demonstration](https://fluxo-fintech-xi.vercel.app/).
+
+</td>
+<td width="50%" valign="top">
+
+#### 🧩 [Signet](https://github.com/murrayglenn75-beep/signet)
+
+**Problem:** Operational narratives should be grounded in verifiable events.
+
+**Approach:** Deterministic signals and tamper-evident event concepts with AI interpretation layered on top.
+
+**Proof to inspect:** Source, threat model and [live demonstration](https://signet-chi.vercel.app/).
+
+</td>
+</tr>
+</table>
+
+**Additional research and systems:** [Brain AI — research evidence](https://github.com/murrayglenn75-beep/Brain-AI) · [Agent Security Lab](https://github.com/murrayglenn75-beep/agent-security-lab) · [CFO-OS](https://github.com/murrayglenn75-beep/CFO-OS)
 
 ---
 
-<sub>Linked projects are engineering demonstrations, prototypes or research systems unless their own documentation explicitly establishes a different readiness level. Test claims should be read with their stated scope and threat model.</sub>
+### The Murray Method
+
+> **Deterministic first. AI second. Authority before autonomy.**
+
+I use a repeatable engineering approach rather than treating a model's response as proof of correctness:
+
+```text
+Business goal → State & constraints → Authority boundaries
+              → Deterministic implementation → AI integration
+              → Adversarial testing → Evidence & deployment review
+```
+
+The model can generate options and explanations. Identity, permissions, critical calculations and irreversible actions require independently enforceable controls, with human approval where appropriate.
+
+[Read my engineering approach →](https://glenn-murray-portfolio.vercel.app/engineering-approach)
+
+### Technical focus
+
+| Layer | Experience and tools |
+| --- | --- |
+| **AI systems** | Agent workflows, LLM integration, RAG, MCP, evaluation and prompt-injection containment |
+| **Application engineering** | Python, TypeScript, JavaScript, Next.js, React, Node.js, SQL and REST APIs |
+| **Delivery** | Supabase, Vercel, GitHub Actions, CI/CD, mobile workflows and technical documentation |
+| **Assurance** | Authorization boundaries, auditability, attack-path analysis, regression testing and failure recovery |
+
+### A note on evidence
+
+I prefer **clear test boundaries and reproducible results** over broad claims. Individual repositories document what is implemented, what was tested, known constraints and what still requires real-world validation. These projects include research, demonstrations and evolving prototypes; review the relevant README before assuming production readiness.
+
+---
+
+<div align="center">
+
+### Let's build systems that deserve to be trusted.
+
+**Open to:** Forward Deployed Engineering · Applied AI Engineering · AI Systems Architecture · Solutions Engineering · AI Security
+
+Irish/EU citizen based in Brazil · Interested in English-speaking international teams
+
+[Portfolio](https://glenn-murray-portfolio.vercel.app) · [GitHub projects](https://github.com/murrayglenn75-beep?tab=repositories) · [LinkedIn](https://www.linkedin.com/in/glenn-patrick-murray/) · [Contact](mailto:murrayglenn75@gmail.com)
+
+</div>
