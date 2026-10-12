@@ -28,6 +28,9 @@ jobs:
       - name: Propose compatible Next.js security update without committing it
         run: npm install --package-lock-only --ignore-scripts --save-exact next@15.5.27 eslint-config-next@15.5.27
 
+      - name: Apply compatible transitive dependency security fixes to candidate lockfile
+        run: npm audit fix --package-lock-only --ignore-scripts || true
+
       - name: Install resolved dependencies from candidate lockfile
         run: npm ci
 
