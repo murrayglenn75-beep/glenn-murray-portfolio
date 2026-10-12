@@ -1,0 +1,54 @@
+name: Evaluate dependency security upgrade
+
+on:
+  push:
+    branches:
+      - fix/evaluate-portfolio-dependency-upgrade
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  assess-upgrade:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Propose compatible Next.js security update without committing it
+        run: npm install --package-lock-only --ignore-scripts --save-exact next@15.5.27 eslint-config-next@15.5.27
+
+      - name: Install resolved dependencies from candidate lockfile
+        run: npm ci
+
+      - name: Audit production dependencies
+        run: npm audit --omit=dev --audit-level=high --ignore-scripts
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+
+      - name: Publish candidate dependency diff for review
+        if: always()
+        run: |
+          git diff -- package.json package-lock.json > candidate-dependency-upgrade.patch
+          git status --short
+      - name: Upload candidate patch
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-upgrade-candidate
+          path: candidate-dependency-upgrade.patch
+          if-no-files-found: error
